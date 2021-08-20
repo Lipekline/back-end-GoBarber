@@ -2,6 +2,16 @@ import { Request, Response, NextFunction } from 'express';
 import { verify } from 'jsonwebtoken';
 import authConfig from '../config/auth';
 
+declare global {
+    namespace Express {
+        interface Request {
+            user: {
+                id: string;
+            };
+        }
+    }
+};
+
 interface TokenPayload {
     iat: number;
     exp: number;
