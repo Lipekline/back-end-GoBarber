@@ -2,7 +2,7 @@ import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateCol
 
 import User from './User'
 
-@Entity('appointments')
+@Entity('markers')
 class Appointment {
     @PrimaryGeneratedColumn('uuid')
     id: string;
